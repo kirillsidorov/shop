@@ -1,17 +1,14 @@
 <?php
 
+include_once '../config/config.php';
+include_once '../library/mainFunctions.php';
+
+//set which controller we will work
 $controllerName = isset($_GET['controller']) ? ucfirst($_GET['controller']) : 'Index';
 
-echo 'подключаемый php файл (Контроллер) =' . $controllerName . '<br />';
-
+//set which function will work
 $actionName = isset($_GET['action']) ? $_GET['action'] : 'index';
 
-echo 'Функция формирующая страницу '  . $actionName . '<br />';
 
-include_once ('../controllers/' . $controllerName . 'Controller.php');
+loadPage($controllerName, $actionName);
 
-$function = $actionName . 'Action';
-
-echo 'Полное название функции ' . $function . '<br />';
-
-$function();
