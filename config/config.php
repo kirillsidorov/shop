@@ -29,5 +29,4 @@ $smarty->setConfigDir('../library/Smarty/configs');
 //** раскомментируйте следующую строку для отображения отладочной консоли
 //$smarty->debugging = true;
 
-
-$smarty->assign('teplateWebPath', TemplateWebPath);
+$smarty->assign('templateWebPath', TemplateWebPath);
